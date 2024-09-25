@@ -1,10 +1,12 @@
 #include <stdio.h>
-#include <cs50.h>
+// #include <cs50.h>
 #include <string.h>
 
 int main(void)
 {
-    string s = get_string("Before: ");
+    char *s;
+    printf("before");
+    scanf("%c", s);
     printf("After: ");
     for(int i = 0, n = strlen(s); i < n; i++)
     {
