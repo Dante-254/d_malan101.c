@@ -1,16 +1,28 @@
-#include <cs50.h>
+#include "cs50.h"
 #include <stdio.h>
+
+const int N = 3;
+
+float average(int length, int array[]);
 
 int main(void)
 {
-    int scores[3];
+
+    int scores[N];
 
     for(int i = 0; i < 3; i++)
     {
         scores[i]=get_int("Score: ");
     }
+    printf("Average: %f", average(N, scores));
+}
 
-    float avg = ((scores[0] + scores[1] + scores[2])/3.0);
-
-    printf("You Average: %f", avg);
+float average(int length, int array[])
+{
+    int sum = 0;
+    for(int i=0; i<length; i++)
+    {
+        sum +=array[i];
+    }
+    return sum / (float) length;
 }
